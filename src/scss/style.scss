@@ -1,0 +1,59 @@
+@import "fonts";
+@import "variables";
+
+html {
+    font-size: 15px;
+}
+
+body {
+    background: #272833 no-repeat center;
+    padding: 0;
+    margin: 0;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 1rem;
+    color: $color-black;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    color: $color-black;
+    text-decoration: none;
+}
+
+h2{
+    color: white;
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 37px;
+  }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* blocks */
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/card";
+@import "blocks/tables";
+@import "blocks/modal";
+@import "blocks/form";
+@import "blocks/btn";
+@import "blocks/chapter";
+@import "icons";
+@import "blocks/files";
+@import "blocks/check";
+@import "blocks/menu";
+
+/* helpers */
+@import "blocks/helpers";
+

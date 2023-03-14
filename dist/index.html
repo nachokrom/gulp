@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=3, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230314234811">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js?_v=20230314234811"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js?_v=20230314234811"></script>
+    <script src="https://unpkg.com/just-validate-plugin-date@latest/dist/just-validate-plugin-date.production.min.js?_v=20230314234811"></script>
+    <title>Главная</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+<!----------------Для просмотра модального окна надо дописать show к классу modal---------------------------------------------------------------------------------------------------------------------------------------->
+
+
+        <!--Редактировать проект-->
+        <div class="modal">
+
+            <div class="modal__dialog">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/Icon-cross.svg" alt="">
+                </button>
+    
+                <div class="modal-add">
+    
+                    <div class="modall-add__content">
+                        <div class="modal-add__header">
+                            <div class="modal-add__title">Редактировать проект</div>
+                        </div>
+    
+                        <form class="form" action="/" method="post">
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Название<span class="label__star">*</span></label>
+                                <input class="form__input" name="name" type="text" id="name">
+                            </div>
+    
+                            <div class="form__group">
+                                <div class="label__counter">
+                                    <div class="form__label-word">
+                                        <label class="form__label" for="input-name">Описание</label>
+                                    </div>
+                                    <span class="counter" id="char_count">0/100</span>
+                                </div>
+                                <textarea class="form__textarea" name="input-text" id="textbox" maxlength="100"></textarea>
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Пригласить</label>
+                                <div class="select__wrapper">
+                                    <select class="form__select" name="select-name">
+                                        <option>+ Добавить сотрудника</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="upload-container" id="upload-container" method="post">
+                                <img src="img/Vector.svg" alt="" width="30px" height="30px">
+                                <div class="upload__item"> 
+                                    <input class="file-input" type="file" name="file" multiple>
+                                    <label class="file-label" for="file-input"></label>
+                                    <span class="file__label">Вы можете просто перетащить файл сюда</span>
+                                </div>
+                            </div>
+        
+                            <div class="line"></div>
+        
+                            <div class="btn">
+                                <button class="btn__a" type="submit">Изменить</button>
+                                <button class="btn__b" type="submit" data-close>Отменить</button>
+                            </div>
+                        </form>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <!-- ./ modal__add-->
+        </div>
+        <!-- ./ Редактировать проект-->
+    
+        <!--Добавить проект-->
+        <div class="modal" id="add-project">
+    
+            <div class="modal__dialog">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/icon-cross.svg" alt="">
+                </button>
+    
+                <div class="modal-add">
+    
+                    <div class="modall-add__content">
+                        <div class="modal-add__header">
+                            <div class="modal-add__title">Добавить проект</div>
+                        </div>
+    
+                        <form class="form" action="/" method="post" id="form-add">
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Название<span class="label__star">*</span></label>
+                                <input class="form__input" name="name" type="text" id="name1">
+                            </div>
+    
+                            <div class="form__group">
+                                <div class="label__counter">
+                                    <div class="form__label-word">
+                                        <label class="form__label" for="input-name">Описание</label>
+                                    </div>
+                                    <span class="counter" id="char_count1">0/100</span>
+                                </div>
+                                <textarea class="form__textarea" name="input-text" id="textbox1" maxlength="100"></textarea>
+                            </div>
+    
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Пригласить</label>
+                                <div class="select__wrapper">
+                                    <select class="form__select" name="select-name">
+                                        <option>+ Добавить сотрудника</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            
+                            <div class="form__group">
+                                <div class="upload-container">
+                                    <img src="img/Vector.svg" alt="">
+                                    <div class="upload__item">
+                                        <input class="file-input" type="file" name="file" multiple>
+                                        <label class="file-label" for="file-input">Вы можете просто перетащить файл сюда</label>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="line"></div>
+    
+                            <div class="btn">
+                                <button class="btn__a" type="submit">Добавить</button>
+                                <button class="btn__b" type="submit" data-close>Отменить</button>
+                            </div>
+                        </form>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <!-- ./ modal__add-->
+        </div>
+        <!-- ./ Добавить проект-->
+    
+        <!--Создать раздел-->
+        <div class="modal">
+            <div class="modal__dialog modal__dialog--sm">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/Icon-cross.svg" alt="">
+                </button>
+    
+                <div class="modall-add__content">
+    
+                    <div class="modall-add__content">
+                        <div class="modal-add__header">
+                            <div class="modal-add__title">Создать раздел</div>
+                        </div>
+    
+                        <form class="form" action="/" method="post" id="form-add2">
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Название<span class="label__star">*</span></label>
+                                <input class="form__input-chapter" name="input-name" type="text" id="name2">
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Проекты</label>
+                                <div class="select__wrapper">
+                                    <select class="form__select form__select--h" name="select-name">
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="line-chapter"></div>
+    
+                            <div class="btn">
+                                <button class="btn__a btn__a--l" type="submit">Создать</button>
+                            </div>
+                        </form>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+        <!-- ./ Создать раздел -->
+    
+        <!--Удалить раздел-->
+        <div class="modal" id="delete__razd">
+            <div class="modal__dialog modal__dialog--item">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/Icon-cross.svg" alt="">
+                </button>
+    
+    
+                <div class="modall-chapter__content">
+                    <div class="modal-chapter__header">
+                        <div class="modal-add__title modal-add__title--bg">Вы уверены, что хотите удалить раздел?</div>
+                    </div>
+    
+                    <div class="btn">
+                        <button class="btn__a btn__a--ma" type="submit">Подтвердить</button>
+                        <button class="btn__b btn__b--mb" type="submit" data-close>Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./ Удалить раздел -->
+    
+        <!--Удалить проект-->
+        <div class="modal" id="delete__proj">
+            <div class="modal__dialog modal__dialog--item">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/Icon-cross.svg" alt="">
+                </button>
+    
+    
+                <div class="modall-chapter__content">
+                    <div class="modal-chapter__header">
+                        <div class="modal-add__title modal-add__title--bg">Вы уверены, что хотите удалить проект?</div>
+                    </div>
+    
+                    <div class="btn">
+                        <button class="btn__a btn__a--ma" type="submit">Подтвердить</button>
+                        <button class="btn__b btn__b--mb" type="submit" data-close>Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./ Удалить проект -->
+    
+        <!--Удалить категорию id="delete-category"-->
+        <div class="modal">
+            <div class="modal__dialog modal__dialog--item">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/Icon-cross.svg" alt="">
+                </button>
+    
+    
+                <div class="modall-chapter__content">
+                    <div class="modal-chapter__header">
+                        <div class="modal-add__title modal-add__title--bg">Вы уверены, что хотите удалить категорию?</div>
+                    </div>
+    
+                    <div class="btn">
+                        <button class="btn__a btn__a--ma" type="submit">Подтвердить</button>
+                        <button class="btn__b btn__b--mb" type="submit" data-close>Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./ Удалить категорию -->
+    
+        <!--Удалить пароль-->
+        <div class="modal">
+            <div class="modal__dialog modal__dialog--item">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/Icon-cross.svg" alt="">
+                </button>
+    
+    
+                <div class="modall-chapter__content">
+                    <div class="modal-chapter__header">
+                        <div class="modal-add__title modal-add__title--bg">Вы уверены, что хотите удалить пароль?</div>
+                    </div>
+    
+                    <div class="btn">
+                        <button class="btn__a btn__a--ma" type="submit">Подтвердить</button>
+                        <button class="btn__b btn__b--mb" type="submit" data-close>Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./ Удалить пароль -->
+    
+        <!--Редактировать  категорию id="red-category"-->
+        <div class="modal">
+    
+            <div class="modal__dialog modal__dialog--br">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/icon-cross.svg" alt="">
+                </button>
+    
+                <div class="modal-add">
+    
+                    <div class="modall-add__content">
+                        <div class="modal-add__header">
+                            <div class="modal-add__title">Редактировать категорию</div>
+                        </div>
+    
+                        <form class="form" action="/" method="post" id="form-add3">
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Название<span class="label__star">*</span></label>
+                                <input class="form__input form__input--b" name="input-name" type="text" id="name3">
+                            </div>
+    
+                            <div class="form__group">
+                                <div class="label__counter">
+                                    <div class="form__label-word">
+                                        <label class="form__label" for="input-name">Описание</label>
+                                    </div>
+                                    <span class="counter" id="char_count2">0/100</span>
+                                </div>
+                                <textarea class="form__textarea form__textarea--c" name="input-text" id="textbox2" maxlength="100"></textarea>
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Пригласить</label>
+                                <div class="select__wrapper">
+                                    <select class="form__select form__select--v" name="select-name">
+                                        <option>+ Добавить сотрудника</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="line line--rt"></div>
+    
+                            <div class="btn">
+                                <button class="btn__a" type="submit">Изменить</button>
+                                <button class="btn__b" type="submit" data-close>Отменить</button>
+                            </div>
+                        </form>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <!-- ./ modal__add-->
+        </div>
+        <!-- ./ Редактировать категорию-->
+    
+        <!--Создать категорию-->
+        <div class="modal" id="create-category">
+    
+            <div class="modal__dialog modal__dialog--br">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/icon-cross.svg" alt="">
+                </button>
+    
+                <div class="modal-add">
+    
+                    <div class="modall-add__content">
+                        <div class="modal-add__header">
+                            <div class="modal-add__title">Создать категорию</div>
+                        </div>
+    
+                        <form class="form" action="/" method="post" id="form-add4">
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Название<span class="label__star">*</span></label>
+                                <input class="form__input form__input--b" name="input-name" type="text" id="name4">
+                            </div>
+    
+                            <div class="form__group">
+                                <div class="label__counter">
+                                    <div class="form__label-word">
+                                        <label class="form__label" for="input-name">Описание</label>
+                                    </div>
+                                    <span class="counter" id="char_count3">0/100</span>
+                                </div>
+                                <textarea class="form__textarea form__textarea--c" name="input-text" id="textbox3" maxlength="100"></textarea>
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Пригласить</label>
+                                <div class="select__wrapper">
+                                    <select class="form__select form__select--v" name="select-name">
+                                        <option>+ Добавить сотрудника</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="line line--rt"></div>
+    
+                            <div class="btn">
+                                <button class="btn__a" type="submit">Сохранить</button>
+                                <button class="btn__b" type="submit" data-close>Отменить</button>
+                            </div>
+                        </form>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <!-- ./ modal__add-->
+        </div>
+        <!-- ./ Создать категорию -->
+    
+        <!--Открыть доступ к категории-->
+        <div class="modal">
+    
+            <div class="modal__dialog modal__dialog--br">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/icon-cross.svg" alt="">
+                </button>
+    
+                <div class="modal-add">
+    
+                    <div class="modall-add__content">
+                        <div class="modal-add__header">
+                            <div class="modal-add__title">Открыть доступ к категории</div>
+                        </div>
+    
+                        <form class="form" action="/" method="post" id="form-add5">
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Название<span class="label__star">*</span></label>
+                                <input class="form__input form__input--b" name="input-name" type="text" id="name5">
+                            </div>
+    
+                            <div class="form__group">
+                                <div class="label__counter">
+                                    <div class="form__label-word">
+                                        <label class="form__label" for="input-name">Описание</label>
+                                    </div>
+                                    <span class="counter" id="char_count4">0/100</span>
+                                </div>
+                                <textarea class="form__textarea form__textarea--c" name="input-text" id="textbox4" maxlength="100"></textarea>
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Пригласить</label>
+                                <div class="select__wrapper">
+                                    <select class="form__select form__select--v" name="select-name">
+                                        <option>+ Добавить сотрудника</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="line line--rt"></div>
+    
+                            <div class="btn">
+                                <button class="btn__a" type="submit">Изменить</button>
+                                <button class="btn__b" type="submit" data-close>Отменить</button>
+                            </div>
+                        </form>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <!-- ./ modal__add-->
+        </div>
+        <!-- ./ Открыть доступ к категории-->
+    
+        <!--Создать пароль-->
+        <div class="modal" id="create-password">
+    
+            <div class="modal__dialog modal__dialog--br">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/icon-cross.svg" alt="">
+                </button>
+    
+                <div class="modal-add">
+    
+                    <div class="modall-add__content">
+                        <div class="modal-add__header">
+                            <div class="modal-add__title">Создать пароль</div>
+                        </div>
+    
+                        <form class="form" action="/" method="post" id="form-password">
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Название<span class="label__star">*</span></label>
+                                <input class="form__input form__input--b" name="input-name" type="text" id="name6">
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Логин<span class="label__star">*</span></label>
+                                <input class="form__input form__input--b" name="input-name" type="text" id="login">
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Пароль<span class="label__star">*</span></label>
+                                <div class="text__fuild">
+                                    <input class="form__input form__input--b" name="input-name" type="password" id="password">
+                                </div>
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">URL<span class="label__star">*</span></label>
+                                <input class="form__input form__input--b" name="input-name" type="text" id="url">
+                            </div>
+    
+                            <div class="form__group">
+                                <div class="label__counter">
+                                    <div class="form__label-word">
+                                        <label class="form__label" for="input-name">Описание</label>
+                                    </div>
+                                    <span class="counter" id="char_count5">0/100</span>
+                                </div>
+                                <textarea class="form__textarea form__textarea--c" name="input-text" id="textbox5" maxlength="100"></textarea>
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Привязать к категории</label>
+                                <div class="select__wrapper">
+                                    <select class="form__select form__select--z" name="select-name">
+                                        <option class="choose">Выберите категорию</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="line line--rt"></div>
+    
+                            <div class="btn">
+                                <button class="btn__a" type="submit">Создать</button>
+                                <button class="btn__b" type="submit" data-close>Отменить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    
+            </div>
+            <!-- ./ modal__add-->
+        </div>
+        <!-- ./ Создать пароль -->
+        
+        <!--Редактировать пароль-->
+        <div class="modal">
+    
+            <div class="modal__dialog modal__dialog--br">
+    
+                <button class="modal__close" type="button" data-close>
+                    <img src="img/icon-cross.svg" alt="">
+                </button>
+    
+                <div class="modal-add">
+    
+                    <div class="modall-add__content">
+                        <div class="modal-add__header">
+                            <div class="modal-add__title">Редактировать пароль</div>
+                        </div>
+    
+                        <form class="form" action="/" method="post" id="form-password-red">
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Название<span class="label__star">*</span></label>
+                                <input class="form__input form__input--b" name="input-name" type="text" id="name6">
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Логин<span class="label__star">*</span></label>
+                                <input class="form__input form__input--b" name="input-name" type="text" id="login1">
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">Пароль<span class="label__star">*</span></label>
+                                <div class="text__fuild">
+                                    <input class="form__input form__input--b" name="input-name" type="password" id="password1">
+                                    <button class="text__fuild-icon" data-modal="#modal-key">
+                                        <img class="icon__key" src="img/Icon-key.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+    
+                            <div class="form__group">
+                                <label class="form__label" for="input-name">URL<span class="label__star">*</span></label>
+                                <input class="form__input form__input--b" name="input-name" type="text" id="url1">
+                            </div>
+    
+                            <div class="form__group">
+                                <div class="label__counter">
+                                    <div class="form__label-word">
+                                        <label class="form__label" for="input-name">Описание</label>
+                                    </div>
+                                    <span class="counter" id="char_count6">0/100</span>
+                                </div>
+                                <textarea class="form__textarea form__textarea--c" name="input-text" id="textbox6" maxlength="100"></textarea>
+                            </div>
+    
+                            <div class="line line--rt"></div>
+    
+                            <div class="btn">
+                                <button class="btn__a" type="submit">Изменить</button>
+                                <button class="btn__b" type="submit" data-close>Отменить</button>
+                            </div>
+                        </form>
+                    </div>
+    
+    
+                </div>
+                <!-- ./ modal__add-->
+            </div>
+        </div>
+        <!-- ./ Редактировать пароль -->
+    
+        <!-- Редактировать пароль (список) -->
+        <div class="modal modal--g" id="modal-key">
+            <div class="modal__dialog modal__dialog--vn">
+                <div class="modal__add">
+    
+                    <div class="modall__add-content">
+    
+                        <div class="modal-add__header modal-add__header--list">
+                            <div class="modal-add__title modal-add__title--vn">Редактировать пароль</div>
+                        </div>
+    
+                        <div class="modal__list">
+                            <div class="modal__list-item" id="checked">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox" name="" id="">
+                                    <span class="check__box"></span>
+                                    Цифры
+                                </label>
+                            </div>
+                            <div class="modal__list-item" id="checked">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox" name="checkbox" id="">
+                                    <span class="check__box"></span>
+                                    Прописные буквы
+                                </label>
+                            </div>
+                            <div class="modal__list-item">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox" name="" id="">
+                                    <span class="check__box"></span>
+                                    Строчные буквы
+                                </label>
+                            </div>
+                            <div class="modal__list-item">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox" name="" id="">
+                                    <span class="check__box"></span>
+                                    Спец. символы
+                                </label>
+                            </div>
+                            <div class="modal__list-item">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox" name="" id="">
+                                    <span class="check__box"></span>
+                                    Длина пароля (символы)
+                                </label>
+                            </div>
+                        </div>
+    
+                        <div class="line line--w"></div>
+    
+                        <div class="btn">
+                            <button class="btn__a btn__a--wq" type="button">Создать</button>
+                            <button class="btn__b" type="button" data-close>Отменить</button>
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <!-- ./ Редактировать пароль (список)-->
+    
+        <!-- Пригласить в проект (список) -->
+        <div class="modal modal--inv" id="invite-project">
+    
+            <div class="modal__dialog modal__dialog--vn">
+                <div class="modal__add">
+    
+                    <div class="modall__add-content">
+    
+                        <div class="modal-add__header modal-add__header--list">
+                            <div class="modal-add__title modal-add__title--vn">Пригласить в проект</div>
+                        </div>
+    
+                        <div class="modal__list">
+                            <div class="modal__list-item" id="checked">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check__box"></span>
+                                    Олег Козорев
+                                </label>
+                            </div>
+                            <div class="modal__list-item" id="checked">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check__box"></span>
+                                    Константин Ткачук
+                                </label>
+                            </div>
+                            <div class="modal__list-item">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check__box"></span>
+                                    Ольга Рыкова
+                                </label>
+                            </div>
+                            <div class="modal__list-item">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check__box"></span>
+                                    Дмитрий Коцюбинский
+                                </label>
+                            </div>
+                            <div class="modal__list-item">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check__box"></span>
+                                    Алексей Осипенко
+                                </label>
+                            </div>
+                        </div>
+    
+                        <div class="line line--w"></div>
+    
+                        <div class="btn">
+                            <button class="btn__a btn__a--wq" type="submit">Сохранить</button>
+                            <button class="btn__b" type="submit" data-close>Отменить</button>
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+    
+        </div>
+        <!-- ./ Пригласить в проект (список)-->
+    
+        <!-- Открыть доступ (список) -->
+        <div class="modal modal--inv" id="open-access">
+    
+            <div class="modal__dialog modal__dialog--vn">
+                <div class="modal__add">
+        
+                    <div class="modall__add-content">
+        
+                        <div class="modal-add__header modal-add__header--list">
+                            <div class="modal-add__title modal-add__title--vn">Открыть доступ</div>
+                        </div>
+        
+                        <div class="modal__list">
+                            <div class="modal__list-item" id="checked">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check__box"></span>
+                                    Олег Козорев
+                                </label>
+                            </div>
+                            <div class="modal__list-item" id="checked">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check__box"></span>
+                                    Константин Ткачук
+                                </label>
+                            </div>
+                            <div class="modal__list-item">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check__box"></span>
+                                    Ольга Рыкова
+                                </label>
+                            </div>
+                            <div class="modal__list-item">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check__box"></span>
+                                    Дмитрий Коцюбинский
+                                </label>
+                            </div>
+                            <div class="modal__list-item">
+                                <label class="check">
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check__box"></span>
+                                    Алексей Осипенко
+                                </label>
+                            </div>
+                        </div>
+        
+                        <div class="line line--w"></div>
+        
+                        <div class="btn">
+                            <button class="btn__a btn__a--wq" type="submit">Сохранить</button>
+                            <button class="btn__b" type="submit" data-close>Отменить</button>
+                        </div>
+        
+                    </div>
+        
+                </div>
+            </div>
+        
+        </div>
+        <!-- ./ Открыть доступ (список)-->
+
+    
+    <script src="js/app.min.js?_v=20230314234811"></script>
+</body>
+</html>
+
+
+
+
+    
+
+    <main>
+        <div class="container">
+            <section class="search__main main">
+                <div class="search">
+                    <div class="search-header">
+                        <div class="search-header__title">
+                            <h3>Проекты </h3>
+                        </div>
+
+                        <div class="search-header__inputs">
+                            <div class="search-header__input">
+                                <input class="input__search" type="search" placeholder="поиск...">
+                                <img class="svg" src="img/search.svg" alt="">
+                            </div>
+                            <img class="settings_btn svg" src="img/Shape-main.svg" alt="">
+                        </div>                                                                        
+                    </div>                   
+                </div>               
+            </section>
+            
+            <section class="active_projects accardion">
+                <div class="title">
+                    <h2>Активные проекты</h2>
+                    <div class="title-parentCon" >
+                        <div class="title-childCon" >
+                
+                            <img data-modal="#add-project" class="svg svg--h" src="img/Union.svg" alt="">
+                            <h3 class="title__pointer" data-modal="#add-project">Добавить проект</h3>
+                            <img class="svg svg--h" src="img/delete.svg" alt="" data-modal="#delete__razd">
+                            <h3 class="title__pointer" data-modal="#delete__razd">Удалить раздел</h3>   
+                        </div>
+                        <img class="acc-btn" src="img/Up.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="acc-con proj-con">
+                    <a href="Progectpage.html">
+                        <div class="card">
+                            <div class="card-title">
+                                <div class="card-title__box">
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>  
+                        </div>                 
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">          
+                            <div class="card-title">
+                                <div class="card-title__box">               
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                       
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">
+
+          
+                            <div class="card-title">
+                                <div class="card-title__box">                   
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                          
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="my_projects accardion">
+                <div class="title">
+                    <h2>Мои проекты</h2>
+                    <div class="title-parentCon" >
+                        <div class="title-childCon" >       
+                            <img data-modal="#add-project" class="svg svg--h" src="img/Union.svg" alt="">
+                            <h3 class="title__pointer" data-modal="#add-project">Добавить проект</h3>
+                            <img class="svg svg--h" src="img/delete.svg" alt="" data-modal="#delete__razd">
+                            <h3 class="title__pointer" data-modal="#delete__razd">Удалить раздел</h3>
+                        </div>
+                        <img class="acc-btn" src="img/Up.svg" alt="">                  
+                    </div>       
+                </div>
+                <div class= " proj-con acc-open acc-con ">
+                    <a href="Progectpage.html">
+                        <div class="card">
+                            <div class="card-title">
+                                <div class="card-title__box">
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">       
+                            <div class="card-title">
+                                <div class="card-title__box">
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                          
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">
+                            <div class="card-title">
+                                <div class="card-title__box">                        
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                               
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">          
+                            <div class="card-title">
+                                <div class="card-title__box">                         
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                                  
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">         
+                            <div class="card-title">
+                                <div class="card-title__box">                                
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>
+                                
+                                       
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">          
+                            <div class="card-title">
+                                <div class="card-title__box">  
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                                          
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">               
+                            <div class="card-title">
+                                <div class="card-title__box">                                       
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>
+                                        
+                        </div>
+                    </a>             
+                </div>
+            </section>
+
+            <section class="remote_projects accardion"  >
+                <div class="title">
+                    <h2>Без привязки к разделу</h2>
+                    <div class="title-parentCon" >
+                        <div class="title-childCon" >
+                  
+                            <img data-modal="#add-project" class="svg svg--h" src="img/Union.svg" alt="">
+                            <h3 class="title__pointer" data-modal="#add-project">Добавить проект</h3>
+                            <img class="svg svg--h" src="img/delete.svg" alt="" data-modal="#delete__razd">
+                            <h3 class="title__pointer" data-modal="#delete__razd">Удалить раздел</h3>     
+                        </div>
+                        <img class="acc-btn" src="img/Up.svg" alt="">
+                    </div>                  
+                </div>
+                <div  class="proj-con acc-open acc-con ">                
+                    <a href="Progectpage.html">
+                        <div class="card">
+                            <div class="card-title">
+                                <div class="card-title__box">                      
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>
+                        
+                               
+                        </div>
+                    </a>
+                    <a href="projects.html">
+                        <div class="card">         
+                            <div class="card-title">
+                                <div class="card-title__box">
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                                   
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">
+                            <div class="card-title">
+                                <div class="card-title__box">
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>
+                        </div>
+                    </a>                       
+                </div>
+            </section> 
+        </div>
+    </main>
+
+
+    <footer>
+
+</footer>
+    <script src="js/app.min.js?_v=20230314234811"></script>
+</body>
+</html>

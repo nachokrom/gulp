@@ -1,0 +1,80 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.btn__a {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-white;
+
+    width: 108px;
+    height: 39px;
+    align-items: center;
+    border-radius: 2px;
+    background-color: #2FC6F6;
+    padding: 8px 19px 7px 17px;
+
+    border: none;
+    cursor: pointer;
+
+    &--ma {
+        width: 129px;
+        height: 39px;
+    }
+
+    &--wq {
+        width: 107px;
+    }
+
+    &:hover {
+        background-color: #81defa;
+    }
+
+    &:active {
+        transform: translateY(-1px);
+    }
+
+}
+
+.btn__b {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-black;
+
+    width: 108px;
+    height: 39px;
+    align-items: center;
+    background: none;
+    padding: 8px 19px 7px 19px;
+
+    border: none;
+    cursor: pointer;
+
+    &--mb {
+        width: 107px;
+        height: 39px;
+        padding: 11px, 19px, 12px, 19px;
+    }
+
+    &--l {
+        width: 96px;
+    }
+}
+
+.card-title__btn {
+    cursor: pointer;
+}
+
+.acc-btn{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.path__btn {
+    cursor: pointer;
+}

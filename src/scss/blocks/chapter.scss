@@ -1,0 +1,54 @@
+.modal-chapter__header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.modall-chapter__content {
+    margin-top: 37px;
+    margin-bottom: 26px;
+}
+
+.form__input-chapter {
+    width: 260px;
+    height: 39px;
+    border-radius: 4px;
+
+    margin-left: 1rem;
+
+    border: 1px solid #C6CDD3;
+
+    transition: border-color .2s linear;
+    
+    &:hover {
+        outline: #36abc7;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: #36abc7;
+    }
+
+    &::placeholder {
+        color: $color-black;
+    }
+}
+
+.form__select-chapter {
+    width: 260px;
+    height: 39px;
+    border-radius: 4px;
+
+    margin-left: 1rem;
+
+    border: 1px solid #C6CDD3;
+}
+
+.line-chapter {
+    width: 259px;
+    margin-left: 1rem;
+    border-bottom: 1px solid #C6CDD3;
+    margin-bottom: 1.2rem;
+}
+

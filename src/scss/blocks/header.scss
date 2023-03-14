@@ -1,0 +1,122 @@
+.search {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0 21px 17px 26px;
+}
+
+.search .search-con div:nth-child(2) {
+    margin-right: 162px;
+}
+
+.search .search-con > div:first-of-type {
+    margin-right: 111px;
+    width: 195px;
+}
+
+.search .search-con > div:last-child {
+    width: 315px;
+}
+
+.search .search-con {
+    display: flex;
+    border-top: 1px solid rgba(132, 139, 148, 0.3);
+    padding-top: 6px;
+}
+
+.search .search-con h4 {
+    color: #848B94;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.search .search-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search .search-header__title {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 19px;
+}
+
+.search .search-header__title h3 {
+    color: #0063C6;
+    border-bottom: 2px solid #0063C6;
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.search .search-header__title svg {
+    width: 10px;
+    height: 10px;
+    transform: rotate(90deg);
+    margin-top: 5px;
+    margin-right: 11px;
+}
+
+.search .search-header__inputs *:not(:last-child) {
+    margin-right: 22px;
+}
+
+.search .search-header__inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 13px;
+}
+
+.search .search-header__inputs .search-header__input {
+    display: flex;
+    color: #979797;
+    border: 1px solid #C6CDD3;
+    border-radius: 17px;
+    padding: 5px 16px;
+}
+
+.search .search-header__inputs .search-header__input input {
+    width: 22.59vw;
+    outline: none;
+    border: none;
+    opacity: 40%;
+}
+  
+.search__main .search {
+    height: 60px;
+    padding: 0 26px;
+}
+.search__main .search-header {
+    height: 100%;
+}
+
+.search__main .search-header .search-header__title {
+    height: 100%;
+    align-items: flex-end;
+}
+  
+.main .search-header__title {
+    margin: 0;
+}
+
+.input__search:focus {
+    border: none;
+}
+
+.title__pointer {
+    cursor: pointer;
+}
+
+.search-header__users {
+    cursor: pointer;
+}
+
+.search-header__history {
+    cursor: pointer;
+}
+
+

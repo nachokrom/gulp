@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html', {
+        "title":"Главная"
+    })
+<body>
+    @@include('html/Modals.html', {})
+    <main>
+        <div class="container">
+            <section class="search__main main">
+                <div class="search">
+                    <div class="search-header">
+                        <div class="search-header__title">
+                            <h3>Проекты </h3>
+                        </div>
+
+                        <div class="search-header__inputs">
+                            <div class="search-header__input">
+                                <input class="input__search" type="search" placeholder="поиск...">
+                                <img class="svg" src="img/search.svg" alt="">
+                            </div>
+                            <img class="settings_btn svg" src="img/Shape-main.svg" alt="">
+                        </div>                                                                        
+                    </div>                   
+                </div>               
+            </section>
+            
+            <section class="active_projects accardion">
+                <div class="title">
+                    <h2>Активные проекты</h2>
+                    <div class="title-parentCon" >
+                        <div class="title-childCon" >
+                
+                            <img data-modal="#add-project" class="svg svg--h" src="img/Union.svg" alt="">
+                            <h3 class="title__pointer" data-modal="#add-project">Добавить проект</h3>
+                            <img class="svg svg--h" src="img/delete.svg" alt="" data-modal="#delete__razd">
+                            <h3 class="title__pointer" data-modal="#delete__razd">Удалить раздел</h3>   
+                        </div>
+                        <img class="acc-btn" src="img/Up.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="acc-con proj-con">
+                    <a href="Progectpage.html">
+                        <div class="card">
+                            <div class="card-title">
+                                <div class="card-title__box">
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>  
+                        </div>                 
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">          
+                            <div class="card-title">
+                                <div class="card-title__box">               
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                       
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">
+
+          
+                            <div class="card-title">
+                                <div class="card-title__box">                   
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                          
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="my_projects accardion">
+                <div class="title">
+                    <h2>Мои проекты</h2>
+                    <div class="title-parentCon" >
+                        <div class="title-childCon" >       
+                            <img data-modal="#add-project" class="svg svg--h" src="img/Union.svg" alt="">
+                            <h3 class="title__pointer" data-modal="#add-project">Добавить проект</h3>
+                            <img class="svg svg--h" src="img/delete.svg" alt="" data-modal="#delete__razd">
+                            <h3 class="title__pointer" data-modal="#delete__razd">Удалить раздел</h3>
+                        </div>
+                        <img class="acc-btn" src="img/Up.svg" alt="">                  
+                    </div>       
+                </div>
+                <div class= " proj-con acc-open acc-con ">
+                    <a href="Progectpage.html">
+                        <div class="card">
+                            <div class="card-title">
+                                <div class="card-title__box">
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">       
+                            <div class="card-title">
+                                <div class="card-title__box">
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                          
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">
+                            <div class="card-title">
+                                <div class="card-title__box">                        
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                               
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">          
+                            <div class="card-title">
+                                <div class="card-title__box">                         
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                                  
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">         
+                            <div class="card-title">
+                                <div class="card-title__box">                                
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>
+                                
+                                       
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">          
+                            <div class="card-title">
+                                <div class="card-title__box">  
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                                          
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">               
+                            <div class="card-title">
+                                <div class="card-title__box">                                       
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>
+                                        
+                        </div>
+                    </a>             
+                </div>
+            </section>
+
+            <section class="remote_projects accardion"  >
+                <div class="title">
+                    <h2>Без привязки к разделу</h2>
+                    <div class="title-parentCon" >
+                        <div class="title-childCon" >
+                  
+                            <img data-modal="#add-project" class="svg svg--h" src="img/Union.svg" alt="">
+                            <h3 class="title__pointer" data-modal="#add-project">Добавить проект</h3>
+                            <img class="svg svg--h" src="img/delete.svg" alt="" data-modal="#delete__razd">
+                            <h3 class="title__pointer" data-modal="#delete__razd">Удалить раздел</h3>     
+                        </div>
+                        <img class="acc-btn" src="img/Up.svg" alt="">
+                    </div>                  
+                </div>
+                <div  class="proj-con acc-open acc-con ">                
+                    <a href="Progectpage.html">
+                        <div class="card">
+                            <div class="card-title">
+                                <div class="card-title__box">                      
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>
+                        
+                               
+                        </div>
+                    </a>
+                    <a href="projects.html">
+                        <div class="card">         
+                            <div class="card-title">
+                                <div class="card-title__box">
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>                                   
+                        </div>
+                    </a>
+                    <a href="Progectpage.html">
+                        <div class="card">
+                            <div class="card-title">
+                                <div class="card-title__box">
+                                </div>
+                                <h3 class="card-title__h3">Новый проект SKIlllINE</h3>
+                                <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                            </div>
+                            <div class="card-owner">
+                                <h2>
+                                    Владелец
+                                </h2>
+                                <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                            </div>
+                            <div class="card-date">
+                                <h2>
+                                    Дата создания
+                                </h2>
+                                <p class="card-date__time">07.11.2022</p>
+                            </div>
+                        </div>
+                    </a>                       
+                </div>
+            </section> 
+        </div>
+    </main>
+
+
+    @@include('html/footer.html', {})
+    <script src="js/app.min.js"></script>
+</body>
+</html>

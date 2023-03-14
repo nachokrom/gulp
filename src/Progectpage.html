@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html', {
+        "title":"Проект"
+    })
+<body>
+    @@include('html/Modals.html', {})
+    <body>
+        <main>
+            <div class="container">
+                <section class="project_search ">
+                    <div class="search">
+                        <div class="search-header">
+                            <div class="search-header__title">
+                                <a class="search-back" href="index.html"><img src="img/arrow-exit.svg" alt=""></a>
+                                <h3>Проект</h3>
+                            </div>
+                            <div class="search-header__inputs">
+                                <div class="search-header__input"><input type="search" placeholder="поиск...">
+                                    <img class="svg" src="img/search.svg" alt="">
+                                </div>                              
+                                
+                                <img data-modal="#invite-project" class="search-header__users" src="img/people.svg" alt="" width="25px" height="15px">                                       
+                            </div>                         
+                        </div>
+
+                        <div class="search-con">
+                            <div class="search-con__user">
+                                <h4>Создатель категории</h4>
+                                <p class="disc">Коцюбинский Дмитрий Александрович </p>
+        
+                            </div>
+                            <div class="search-con__date">
+                                <h4>Дата добавления </h4>
+                                <p class="disc">07.11.2022 </p>
+                                
+                            </div>
+                            <div class="search-con__desc">
+                                <h4>
+                                    Описание <img class="disc_s" src="img/redact.svg" alt="" width="16px" height="16px">
+                                </h4>
+                                <p class="disc">Интернет магазин мебели. Разработка,<br>  дизайн, программирование страниц.</p>
+                                
+                            </div>
+                        </div>                        
+                    </div>
+                </section>
+                
+                <section class="my_projects accardion">
+                    <div class="title">
+                        <h2>Категория</h2>
+                        <div class="title-parentCon" >
+                            <div class="title-childCon title-childCon--vh">           
+                                <img class="svg svg--t" src="img/password.svg" alt="" width="12px" height="15px" data-modal="#create-password">
+                                <h3 class="title__pointer" data-modal="#create-password">Создать пароль</h3>
+                                <img class="svg svg--t" src="img/category.svg" alt="" width="16px" height="13px" data-modal="#create-category">
+                                <h3 data-modal="#create-category" class="title__pointer">Создать категорию</h3>                    
+                            </div>
+                            <img class="acc-btn" src="img/Up.svg" alt="">          
+                        </div>           
+                    </div>
+                    <div class= " proj-con acc-con acc-open ">
+                        <a href="Accespage.html">
+                            <div class="card">            
+                                <div class="card-title">
+                                    <div class="card-title__box">                   
+                                    </div>
+                                    <h3 class="card-title__h3">Доступ к сайту по SSH</h3>
+                                    <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                                </div>
+                                <div class="card-owner">
+                                    <h2>
+                                        Владелец
+                                    </h2>
+                                    <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                                </div>
+                                <div class="card-date">
+                                    <h2>
+                                        Дата создания
+                                    </h2>
+                                    <p class="card-date__time">07.11.2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="Accespage.html">
+                            <div class="card">             
+                                <div class="card-title">
+                                    <div class="card-title__box">                        
+                                    </div>
+                                    <h3 class="card-title__h3">Доступ к сайту по SSH</h3>
+                                    <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                                </div>
+                                <div class="card-owner">
+                                    <h2>
+                                        Владелец
+                                    </h2>
+                                    <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                                </div>
+                                <div class="card-date">
+                                    <h2>
+                                        Дата создания
+                                    </h2>
+                                    <p class="card-date__time">07.11.2022</p>
+                                </div>                               
+                            </div>
+                        </a>
+                        <a href="Accespage.html">
+                            <div class="card">            
+                                <div class="card-title">
+                                    <div class="card-title__box">                          
+                                    </div>
+                                    <h3 class="card-title__h3">Доступ к сайту по SSH</h3>
+                                    <img class='card-title__btn' src="img/icon-more.svg" alt="" width="20px" height="20px">
+                                </div>
+                                <div class="card-owner">
+                                    <h2>
+                                        Владелец
+                                    </h2>
+                                    <p class="card-owner__name">Коцюбинский Дмитрий</p>
+                                </div>
+                                <div class="card-date">
+                                    <h2>
+                                        Дата создания
+                                    </h2>
+                                    <p class="card-date__time">07.11.2022</p>
+                                </div>                         
+                            </div>
+                        </a>                 
+                    </div>
+                </section>
+
+                <section class="password_table accardion">
+                    <div class="title">
+                        <h2>Пароли без привязки к категории</h2>
+                        <div class="title-parentCon" >
+                            <img class="acc-btn" src="img/Up.svg" alt="">                      
+                        </div>                     
+                    </div>
+                    <div class="acc-con acc-open">
+                        <div class="table">                                       
+                            <div class="table-head">
+                                <h4 class="name">
+                                    Название <img class="svg" src="img/CRM.svg" alt="" width="24" height="24">
+                                </h4>
+                                <h4  class="about">
+                                    Описание <img class="svg" src="img/CRM.svg" alt="" width="24" height="24">
+                                </h4>
+                                <h4  class="login">
+                                    Логин
+                                </h4>
+                                <h4 class="password">
+                                    Пароль <img class="svg" src="img/CRM.svg" alt="" width="24" height="24">
+                                </h4>
+                                <h4 class="url">
+                                    URL <img class="svg" src="img/CRM.svg" alt="" width="24" height="24">
+                                </h4>
+                                <h4 class="founding_date">
+                                    Дата создания <img class="svg" src="img/CRM.svg" alt="" width="24" height="24">
+                                </h4>
+                            </div>
+                          
+                            <div class="table-rows">
+                                <div class="table-row">
+                                    <div><span id="name" >Доступ к сайту по SSH</span><span id="about" >Изменение доступа к сайту</span><span id="login">admin</span><span id="password">qwerty123gh</span><span id="url">https://lk.skillline.ru</span><span id="founding_date">14.02.2023</span>
+                                        <img class='card-title__btn' src="img/icon-more.svg" alt="" width="16px" height="16px">                         
+                                    </div>                          
+                                </div>
+                                <div class="table-row">
+                                    <div><span id="name" >Доступ к сайту по SSH</span><span id="about" >Изменение доступа к сайту</span><span id="login">admin</span><span id="password">qwerty123gh</span><span id="url">https://lk.skillline.ru</span><span id="founding_date">14.02.2023</span>
+                                        <img class='card-title__btn' src="img/icon-more.svg" alt="" width="16px" height="16px">
+                                    </div>                             
+                                </div>
+                                <div class="table-row">
+                                    <div><span id="name" >Доступ к сайту по SSH</span><span id="about" >Изменение доступа к сайту</span><span id="login">admin</span><span id="password">qwerty123gh</span><span id="url">https://lk.skillline.ru</span><span id="founding_date">14.02.2023</span>
+                                        <img class='card-title__btn' src="img/icon-more.svg" alt="" width="16px" height="16px">
+                                  
+                                    </div>                                 
+                                </div>
+                                <div class="table-row">
+                                    <div><span id="name" >Доступ к сайту по SSH</span><span id="about" >Изменение доступа к сайту</span><span id="login">admin</span><span id="password">qwerty123gh</span><span id="url">https://lk.skillline.ru</span><span id="founding_date">14.02.2023</span>
+                                        <img class='card-title__btn' src="img/icon-more.svg" alt="" width="16px" height="16px">                                      
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div><span id="name" >Доступ к сайту по SSH</span><span id="about" >Изменение доступа к сайту</span><span id="login">admin</span><span id="password">qwerty123gh</span><span id="url">https://lk.skillline.ru</span><span id="founding_date">14.02.2023</span>
+                                        <img class='card-title__btn' src="img/icon-more.svg" alt="" width="16px" height="16px">
+                                          
+                                    </div>                                   
+                                </div>
+                                <div class="table-pagination">
+                                    <h3 class="table-pagination__title">страницы:</h3>
+                                    <span class="table-pagination__num">1 2 3 4 5 6</span>
+                                    <div class="table-pagination__pag">
+                                        <img class="path__btn" src="img/Path.svg" alt="" width="6px" height="10px">
+                                        <h4 class="table-pagination__prev">предыдущая</h4 >
+                                        <h4 class="table-pagination__next">следующая</h4>
+                                        <img class="path__btn" src="img/Path-next.svg" alt="" width="6px" height="10px">
+                                    </div>     
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+
+
+    @@include('html/footer.html', {})
+    <script src="js/app.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+.table {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px 12px;
+    &-row {
+   
+        border-bottom: 2px solid #C6CDD3;
+  
+    div {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        display: grid;
+        grid-template-columns: 18% 23% 13% 13% 18% 13% 1%;
+    
+        white-space: nowrap;
+        padding: 14px 0;
+    }
+    }
+    &-head {
+        display: grid;
+        grid-template-columns: 18% 23% 13% 13% 18% 13% 1%;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #C6CDD3;
+        color: $gray;
+        h4 {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+            color:  #525C69;
+        }
+    }
+    &-rows:not(:last-child) {
+        margin-bottom: 17px;
+    }
+    &-pagination >  *:not(:last-child) {
+        margin-right: 14px;
+    }
+    &-pagination {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+       
+        &__num {
+            color: $blue;
+            font-weight: 600;
+            font-size: 11px;
+            word-spacing: 15px;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 11px;
+            line-height: 15px;
+            color:#848B94;
+            text-transform: uppercase;
+        }
+        &__pag > *:not(:last-child) {
+            margin-right: 14px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        &__pag{
+            display: flex;
+            align-items: center;
+            color: $blue;
+            font-weight: 700;
+            font-size: 11px;
+            line-height: 15px;
+        svg:first-of-type{
+            transform: rotate(180deg);
+        }
+          
+        }
+      }
+    }
+    .history_table {
+      .table-head {
+            div {
+            display: grid;
+            grid-template-columns: repeat(3,190px);
+            grid-column-gap: 27vw;
+        }      
+    }
+    
+      .table-row {
+       
+        div {
+          display: grid;
+          grid-template-columns: repeat(3,190px);
+          grid-column-gap: 27vw;
+        }       
+    }
+}
+   

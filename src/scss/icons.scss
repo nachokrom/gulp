@@ -1,0 +1,57 @@
+.text__fuild {
+    position: relative;
+}
+
+.text__fuild input {
+    padding-right: 2.5rem;
+}
+
+.text__fuild-icon {
+    background: none;
+    border: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 1.5rem;
+    width: 1.7rem;
+    cursor: pointer;
+}
+
+.select__wrapper {
+    position: relative;
+}
+
+.select__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    transform: translateY(-50%);
+
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/Input-icon.svg');
+
+    pointer-events: none;
+}
+
+.svg {
+    cursor: pointer;
+
+    &--h {
+        margin: 8px 6px 8px 14px;
+    }
+
+    &--t {
+        margin-left: 14px;
+        margin-right: 6px;
+    }
+}
+
+.search-back {
+    margin-right: 11px;
+}
